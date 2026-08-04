@@ -272,7 +272,7 @@
       letter-spacing: 0.3em;
       color: var(--accent);
       text-transform: uppercase;
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       opacity: 0;
       animation: fadeUp 0.8s 0.2s forwards;
     }
