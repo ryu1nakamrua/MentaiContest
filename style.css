@@ -1100,7 +1100,7 @@ button[type="submit"]:hover{
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
       section { padding: 64px 24px; }
-      .hero { padding: 0 24px; }
+      .hero{padding: 260px 24px 0;}
       .hero-stats { right: 24px; gap: 24px; }
       .stat-num { font-size: 1.8rem; }
       .overview-grid { grid-template-columns: 1fr; }
