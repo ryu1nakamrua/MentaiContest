@@ -62,7 +62,7 @@
 
     /* NAV */
     nav {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
@@ -355,7 +355,7 @@
     @media (max-width: 768px){
 
       .hero{
-            padding-top: 180px;
+            padding-top: 260px !important;
       }
 
     .hero-label{
