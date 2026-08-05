@@ -21,11 +21,7 @@ function closeMenu() {
 
 // メニュー外を押したら閉じる
 document.addEventListener("click", (e) => {
-    if (
-        mobileMenu.classList.contains("open") &&
-        !mobileMenu.contains(e.target) &&
-        !hamburger.contains(e.target)
-    ) {
+    if (e.target === mobileMenu) {
         closeMenu();
     }
 });
