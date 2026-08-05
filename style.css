@@ -355,7 +355,7 @@
     @media (max-width: 768px){
 
       .hero{
-            padding-top: 150px !important;
+            padding-top: 300px !important;
       }
 
     .hero-label{
@@ -393,6 +393,7 @@
       position: relative;
       z-index: 1;
       padding: 100px 10vw;
+      animation: fadeUp 1s ease;
     }
 
     .section-label {
@@ -1145,6 +1146,9 @@ button[type="submit"]:hover{
   justify-content: center;
   padding: 80px 0;
   border: 1px solid var(--border);
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .upcoming-text {
