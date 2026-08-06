@@ -226,7 +226,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       padding: 0 10vw;
-      padding-top: 180px; /* ← 追加 */
+      padding-top: 100px; /* ← 追加 */
       overflow: hidden;
     }
     .hero-message {
@@ -253,7 +253,7 @@
 
     /* Spinning yoyo graphic */
     .yoyo-bg-wrap {
-      position: absolute;
+      position: fixed;
       right: -5vw;
       top: 50%;
       transform: translateY(-50%);
@@ -462,7 +462,7 @@
     }
 
     .rule-card {
-      background: var(--card);
+      background: rgba(0, 0, 0, 0.5);
       padding: 36px;
       position: relative;
       overflow: hidden;
