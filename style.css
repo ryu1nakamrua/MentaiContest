@@ -1,5 +1,4 @@
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg: #050508;
@@ -962,6 +961,7 @@ button[type="submit"]:hover{
   transition: transform 0.3s;
   display: flex;
   flex-direction: row;
+  align-items: stretch; /* 写真をカードの高さいっぱいに */
 }
 .judge-card:hover { transform: translateY(-6px); }
 .judge-card::before {
@@ -973,9 +973,9 @@ button[type="submit"]:hover{
 }
 
 .judge-photo {
-  width: 50%;
-  flex-shrink:0;
-  aspect-ratio: 3 / 4;
+  width: 340px;       /* 固定幅：文章量が違っても写真サイズが安定 */
+  min-height: 100%;   /* 文章側の高さに合わせて縦に伸びる */
+  flex-shrink: 0;
   object-fit: cover;
   display: block;
   transition: filter 0.3s;
@@ -1074,7 +1074,9 @@ button[type="submit"]:hover{
 
   .judge-photo,
   .judge-photo-placeholder {
-    width: 100%; /* PCでの固定幅(280pxなど)を解除して横幅いっぱいに */
+    width: 100%;         /* PCでの固定幅を解除して横幅いっぱいに */
+    min-height: 0;
+    aspect-ratio: 3 / 4;  /* スマホでは写真の縦横比を固定 */
   }
 }
 
