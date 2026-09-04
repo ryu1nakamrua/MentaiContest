@@ -837,7 +837,7 @@ button[type="submit"]:hover{
 
 
     /* ENTRY */
-    #entry { background: var(--bg); }
+    #entry { background: rgba(0, 0, 0, 0.5); }
     .entry-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -950,16 +950,18 @@ button[type="submit"]:hover{
 #judges { background: var(--surface); }
 
 .judges-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
 .judge-card {
-  background: var(--card);
+  background:  rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: row;
 }
 .judge-card:hover { transform: translateY(-6px); }
 .judge-card::before {
@@ -971,18 +973,18 @@ button[type="submit"]:hover{
 }
 
 .judge-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 50%;
+  flex-shrink:0;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
-  filter: grayscale(20%);
   transition: filter 0.3s;
 }
 .judge-card:hover .judge-photo { filter: grayscale(0%); }
 
 .judge-photo-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: var(--surface);
   display: flex;
   align-items: center;
@@ -995,6 +997,8 @@ button[type="submit"]:hover{
 
 .judge-body {
   padding: 28px;
+  flex:1;
+  min-width:0; /* テキストがはみ出さないための保険 */
 }
 
 .judge-name {
@@ -1007,7 +1011,7 @@ button[type="submit"]:hover{
 }
 .judge-name-sub {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.68rem;
+  font-size: 1rem;
   letter-spacing: 0.15em;
   color: #ff005d;
   text-transform: uppercase;
@@ -1060,7 +1064,18 @@ button[type="submit"]:hover{
 }
 
 @media (max-width: 768px) {
-  .judges-grid { grid-template-columns: 1fr; }
+  .judges-grid {
+    /* PC/スマホ共通でflexなのでここは変更不要 */
+  }
+
+  .judge-card {
+    flex-direction: column; /* 横並び→縦並びに切り替え */
+  }
+
+  .judge-photo,
+  .judge-photo-placeholder {
+    width: 100%; /* PCでの固定幅(280pxなど)を解除して横幅いっぱいに */
+  }
 }
 
 
