@@ -957,6 +957,12 @@ button[type="submit"]:hover{
     background: rgba(0, 0, 0, 0.35); /* PC用の0.55より薄く */
     max-width: 100%;
   }
+  @media (max-width: 768px) {
+  .entryform-row {
+    display: flex;
+    flex-direction: column;
+  }
+}
 }
 
     /* RESULTS */
