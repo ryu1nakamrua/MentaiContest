@@ -98,17 +98,17 @@
 <img alt="" class="yoyo-bg" src="mentaiko_logo_color_BGtouka.png"/>
 </div>
 
-<div class="section-label">// 04</div>
+<!--<div class="section-label">// 04</div>
 <h2 class="section-title">参加申込</h2>
 <div class="upcoming-box">
 <div class="upcoming-text">UPCOMING</div>
 <p class="upcoming-sub">近日中に情報を公開予定</p>
 </div>
-</section>
-<!--<section id="entry">
+</section>-->
+
   <div class="section-label">// 04</div>
   <h2 class="section-title">参加申込</h2>
-  <div class="entry-wrap">
+  <div class="overview-card">
     <div class="entry-info">
       <p>エントリーフォームに必要事項を記入のうえ送信してください。受付後、確認メールが届きます。参加費は銀行振込にてお支払いください。</p>
       <table class="fee-table">
@@ -121,57 +121,79 @@
         </tbody>
       </table>
     </div>
-    <div>
-      <div class="entry-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label>お名前（カタカナ）</label>
-            <input type="text" placeholder="中村　隆一">
+  </div>
+  <div class="overview-card">
+    <form id="entryForm">
+
+       <div class="entryform-row">
+          <div class="entryform-group">
+            <label>お名前（name）</label>
+            <input type="text" placeholder="中村　隆一" id="name" name="name" required>
           </div>
-          <div class="form-group">
-            <label>ステージネーム（ふりがな）</label>
-            <input type="text" placeholder="明太子ヨーヨー練習会の長">
+          <div class="entryform-group">
+            <label>エントリーネーム（entry name）</label>
+            <input type="text" placeholder="明太子ヨーヨー練習会の長" id="entryname" name="entryname" required>
           </div>
         </div>
-        <div class="form-group">
-          <label>メールアドレス</label>
-          <input type="email" placeholder="example@email.com">
+        <div class="entryform-group">
+          <label>メールアドレス(Email)</label>
+          <input type="email" placeholder="example@email.com" id="email" name="email" required>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>参加部門</label>
-            <select>
+        
+          <div class="entryform-group">
+            <label>参加部門(division)</label>
+            <select id="category" name="category" required>
               <option value="">選択してください</option>
-              <option>明太子</option>
-              <option>辛子明太子</option>
+              <option value="明太子">明太子(beginner)</option>
+              <option value="辛子明太子">辛子明太子(championship)</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>年齢</label>
-            <input type="number" placeholder="20">
-          </div>
+
+          <div class="entryform-group">
+          <label>フリースタイル時間(time)</label>
+          
+          <input type="text" placeholder="0:00" id="time" name="time" required>
+          
         </div>
-        <div class="form-group">
+        
+        <!--<div class="entryform-group">
           <label>使用音楽タイトル</label>
           <input type="text">
         </div>
-        <div class="form-group">
+        <div class="entryform-group">
           <label>使用音楽アーティスト</label>
           <input type="text">
-        </div>
-        <div class="form-group">
+        </div>-->
+        <div class="entryform-group">
             <label>撮影可否</label>
-            <select>
+            <select id="filming" name="filming" required>
               <option value="">選択してください</option>
-              <option>可能</option>
+              <option>可</option>
               <option>不可</option>
             </select>
-          </div>
-        <button class="btn btn-primary" style="margin-top:8px; width:100%; text-align:center;">申込を送信</button>
-      </div>
-    </div>
+       </div>
+       <div class="entryform-group">
+            <label>Tシャツサイズ</label>
+            <select id="shirt" name="shirt" required>
+              <option value="">選択してください</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>2XL</option>
+              <option>3XL</option>
+            </select>
+        </div>
+
+        <div class="entryform-group">
+          <label>意気込み</label>
+          <textarea placeholder="意気込みをご自由にお書きください" id="message" name="message" ></textarea>
+        </div>
+        <button type="submit"　class="btn btn-primary" style="margin-top:8px; width:100%; text-align:center;">申込を送信</button>
+        </form>
   </div>
-</section>-->
+    
+</section>
 <div class="divider"></div>
 
 <!-- FOOTER -->
@@ -180,6 +202,7 @@
 <p>© Mentai Contest . ALL RIGHTS RESERVED.</p>
 <p style="font-size:0.6rem; color: rgba(106,106,136,0.5);">contact ryu1c3yoyo@gmail.com</p>
 </footer>
+
 
 <script src="script.js"></script></body>
 </html>
