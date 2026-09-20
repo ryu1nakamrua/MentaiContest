@@ -45,7 +45,7 @@ window.addEventListener("resize", () => {
 
 
 const ENTRY_API_URL =
-  'https://script.google.com/macros/s/AKfycbzgaf4LPH4GEjNsZ3tiGQF5uHKcEZk74stYrsidr1pgHkfkIsXWwO5TjScocJaNNWCx_g/exec';
+  'https://script.google.com/macros/s/AKfycbwPVmb98XftAOr0R0NHi4UXHaGqptQWJBWoY-WkPnZGm6AFmKaqiRuH8sIw3xoP9BPqLg/exec';
 
 const entryForm = document.getElementById('entryForm');
 
