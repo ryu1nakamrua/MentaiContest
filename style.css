@@ -266,7 +266,7 @@
       width: 100%;
       height: 100%;
       opacity: 0.2;   /* 一時的に見やすい値に */
-      animation: spin 10s linear infinite;
+      animation: spin 1s linear infinite;
       object-fit: contain; 
       mix-blend-mode: screen;    /* 白を飛ばす（背景が暗い場合向け）*/
     }
@@ -1247,7 +1247,7 @@ button[type="submit"]:hover{
 .upcoming-text {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(3rem, 8vw, 6rem);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 0, 93, 0.4);
   animation: pulse 2s ease-in-out infinite;
