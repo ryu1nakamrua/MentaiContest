@@ -1301,6 +1301,7 @@ button[type="submit"]:hover{
   }
 }
 
+ 
     /* SPONSORS PAGE */
     #sponsors {
       min-height: 100vh;
@@ -1309,19 +1310,25 @@ button[type="submit"]:hover{
     .sponsor-image-wrap {
       position: relative;
       z-index: 2;
+      display: block;
       width: 100%;
-      max-width: 1500px;
+      max-width: none;
       margin: 0 auto;
       padding: 0;
       background: #050508;
+      overflow: visible;
+      box-sizing: border-box;
     }
     .sponsor-image-wrap img {
       display: block;
-      width: 100%;
-      height: auto;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: contain;
+      object-position: center;
       opacity: 1;
+      margin: 0 auto;
     }
     @media (max-width: 768px) {
       #sponsors { padding-left: 16px; padding-right: 16px; }
     }
-  
