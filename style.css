@@ -1266,3 +1266,37 @@ button[type="submit"]:hover{
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
+/* 演技順画像 */
+.freestyle-order-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.freestyle-order-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 演技順画像の表示領域 */
+#entry .upcoming-box {
+  width: 100%;
+  max-width: 1500px;
+  padding: 0;
+  border: none;
+  margin: 0 auto;
+}
+
+/* スマートフォン */
+@media (max-width: 768px) {
+  .freestyle-order-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
